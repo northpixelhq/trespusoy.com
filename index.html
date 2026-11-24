@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-1wtZ1gLC0241tbUYJvuuKVqgTIToWFsEZXTYoa7Qkc4='; style-src 'self'; img-src 'self'; font-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Tres – Pusoy Dos: free Pusoy Dos for Android, iPhone and iPad</title>
+<meta name="description" content="Pusoy Dos, the Filipino card classic also known as Big Two: play solo against three AI opponents, with friends on the same Wi-Fi, or online in a private room. Free.">
+<link rel="canonical" href="https://trespusoy.com/">
+<meta name="theme-color" content="#0E2C1E">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tres – Pusoy Dos">
+<meta property="og:url" content="https://trespusoy.com/">
+<meta property="og:title" content="Tres – Pusoy Dos">
+<meta property="og:description" content="Pusoy Dos solo, with friends on one Wi-Fi, or online in a private room. Free on Google Play and the App Store.">
+<meta property="og:image" content="https://trespusoy.com/assets/img/share.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Tres – Pusoy Dos wordmark on green felt beside the ace of hearts, the two of spades and the three of clubs.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/spectral-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>(function(d){var u=navigator.userAgent||'',t=navigator.maxTouchPoints||0,p='other';if(/Windows Phone/i.test(u))p='other';else if(/Android/i.test(u))p='android';else if(/iPhone|iPad|iPod/.test(u))p='ios';else if(/Macintosh/.test(u)&&t>1)p='ios';d.className+=' js is-'+p;})(document.documentElement);</script>
+<script src="/assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://trespusoy.com/#website",
+      "url": "https://trespusoy.com/",
+      "name": "Tres – Pusoy Dos",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://trespusoy.com/#publisher" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://trespusoy.com/#publisher",
+      "name": "North Pixel Labs",
+      "url": "https://northpixelhq.github.io/",
+      "email": "northpixellabs@gmail.com"
+    },
+    {
+      "@type": ["VideoGame", "MobileApplication"],
+      "@id": "https://trespusoy.com/#game",
+      "name": "Tres – Pusoy Dos",
+      "url": "https://trespusoy.com/",
+      "description": "Pusoy Dos — the Filipino card classic, also known as Big Two — played solo against three AI opponents, with friends on the same Wi-Fi, or online with friends in a private room. No sign-in needed.",
+      "image": "https://trespusoy.com/assets/media/tres-icon-512.png",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Card",
+      "operatingSystem": "Android, iOS, iPadOS",
+      "gamePlatform": ["Android", "iPhone", "iPad"],
+      "genre": "Card game",
+      "playMode": ["SinglePlayer", "MultiPlayer"],
+      "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4 },
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free" },
+      "publisher": { "@id": "https://trespusoy.com/#publisher" },
+      "author": { "@id": "https://trespusoy.com/#publisher" },
+      "installUrl": "https://trespusoy.com/get/",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=dev.tres.app",
+        "https://apps.apple.com/app/id6815482151"
+      ],
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "Tres – Pusoy Dos gameplay",
+        "description": "Real play recorded from Tres 2.5.0: a new game is dealt, a club flush holding the 3 of clubs opens it and a hearts flush beats it; then, in another game the player has already finished first, an AI opponent goes out with a full house to end it.",
+        "contentUrl": "https://trespusoy.com/assets/video/gameplay.mp4",
+        "thumbnailUrl": "https://trespusoy.com/assets/video/gameplay-poster.webp",
+        "uploadDate": "2026-11-25",
+        "duration": "PT19S"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- partial:sprite -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <!-- The game's own suit marks (card_face.dart, suitUnitPath), in a 100-unit square. -->
+  <symbol id="s-c" viewBox="0 0 100 100"><circle cx="50" cy="26" r="24"/><circle cx="26" cy="60" r="24"/><circle cx="74" cy="60" r="24"/><circle cx="50" cy="55" r="7"/><path d="M42 100h16l-4-40h-8z"/></symbol>
+  <symbol id="s-s" viewBox="0 0 100 100"><path d="M50 2C-15 45 8 98 50 70C92 98 115 45 50 2Z"/><path d="M42 100h16l-4-30h-8z"/></symbol>
+  <symbol id="s-h" viewBox="0 0 100 100"><path d="M50 22C45.5 10 37.5 5 29 5C16 5 6 16 6 31C6 56 37 73 50 95C63 73 94 56 94 31C94 16 84 5 71 5C62.5 5 54.5 10 50 22Z"/></symbol>
+  <symbol id="s-d" viewBox="0 0 100 100"><path d="M50 1Q65.69 26.9 85.28 50Q65.69 73.1 50 99Q34.31 73.1 14.72 50Q34.31 26.9 50 1Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.8v16.4a1 1 0 0 0 1.5.86l13.7-8.2a1 1 0 0 0 0-1.72L7.5 2.94A1 1 0 0 0 6 3.8Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="5" y="3" width="5" height="18" rx="1.2"/><rect x="14" y="3" width="5" height="18" rx="1.2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M2.5 9.5a14 14 0 0 1 19 0M5.8 13a9 9 0 0 1 12.4 0M9.1 16.4a4.2 4.2 0 0 1 5.8 0"/><circle cx="12" cy="19.6" r="1.4"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.2a1.4 1.4 0 0 1 .7 2.6v1.7H17a3 3 0 0 1 3 3v7.3a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9.5a3 3 0 0 1 3-3h4.3V4.8A1.4 1.4 0 0 1 12 2.2ZM9 11a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 9 11Zm6 0a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 15 11Z"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+</svg>
+<!-- /partial:sprite -->
+<!-- partial:header -->
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="/" aria-label="Tres – Pusoy Dos, home">
+      <img src="/assets/img/icon-96.webp" width="34" height="34" alt="">
+      <span class="brand__word" aria-hidden="true">Tres</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/how-to-play/">How to play</a>
+      <a href="/play-online/">Play online</a>
+      <a href="/faq/">Questions</a>
+      <a href="/media-kit/">Media kit</a>
+    </nav>
+    <a class="btn btn--gold" href="/get/" data-get>Get Tres</a>
+    <details class="menu">
+      <summary aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <nav class="menu__panel" aria-label="Main">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/how-to-play/">How to play Pusoy Dos</a>
+        <a href="/play-online/">Play online with friends</a>
+        <a href="/faq/">Questions and answers</a>
+        <a href="/media-kit/">Media kit</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<!-- /partial:header -->
+<main id="main">
+
+  <!-- 1 · The first screen -->
+  <section class="hero" aria-labelledby="title" data-hero>
+    <div class="wrap hero__inner">
+      <div class="stage" role="img" aria-label="Three cards dealt face up: the ace of hearts and the two of spades flank the three of clubs, which rises to lead.">
+        <div class="stage__fan">
+          <div class="slot slot--a"><div class="float"><div class="lift"><div class="card">
+            <div class="card__face is-red">
+              <span class="idx">A<svg class="suit"><use href="#s-h"/></svg></span>
+              <span class="pips pips--1"><svg class="suit"><use href="#s-h"/></svg></span>
+            </div>
+            <div class="card__back"><svg class="suit"><use href="#s-c"/></svg></div>
+          </div></div></div></div>
+          <div class="slot slot--b"><div class="float"><div class="lift"><div class="card">
+            <div class="card__face is-black">
+              <span class="idx">2<svg class="suit"><use href="#s-s"/></svg></span>
+              <span class="pips pips--2"><svg class="suit"><use href="#s-s"/></svg><svg class="suit"><use href="#s-s"/></svg></span>
+            </div>
+            <div class="card__back"><svg class="suit"><use href="#s-c"/></svg></div>
+          </div></div></div></div>
+          <div class="slot slot--c"><div class="float"><div class="lift">
+            <div class="halo"></div>
+            <span class="pulse"></span><span class="pulse"></span><span class="pulse"></span>
+            <div class="card">
+              <div class="card__face is-black">
+                <span class="idx">3<svg class="suit"><use href="#s-c"/></svg></span>
+                <span class="pips pips--3"><svg class="suit"><use href="#s-c"/></svg><svg class="suit"><use href="#s-c"/></svg><svg class="suit"><use href="#s-c"/></svg></span>
+              </div>
+              <div class="card__back"><svg class="suit"><use href="#s-c"/></svg></div>
+            </div>
+          </div></div></div>
+        </div>
+      </div>
+
+      <div class="hero__copy">
+        <p class="eyebrow" lang="tl">Tara, Pusoy Dos!</p>
+        <h1 class="wordmark" id="title">
+          <span class="wordmark__tres">Tres</span>
+          <span class="wordmark__rule" aria-hidden="true"><svg class="suit"><use href="#s-d"/></svg></span>
+          <span class="sr-only">–</span>
+          <span class="wordmark__sub">Pusoy Dos</span>
+        </h1>
+        <p class="hero__lede">The Filipino card classic, also known as Big Two. Play solo against three AI opponents, with friends on one Wi-Fi, or online in a private room.</p>
+        <div class="stores stores--pair" data-getbar-start>
+          <a class="store store--gold" data-store="play" href="https://play.google.com/store/apps/details?id=dev.tres.app">
+            <span><span class="store__pre">For Android</span><span class="store__name">Google Play</span></span>
+            <svg class="store__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="store store--gold" data-store="apple" href="https://apps.apple.com/app/id6815482151">
+            <span><span class="store__pre">For iPhone and iPad</span><span class="store__name">App Store</span></span>
+            <svg class="store__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <ul class="hero__meta">
+          <li><svg class="suit" aria-hidden="true"><use href="#s-c"/></svg>Free</li>
+          <li><svg class="suit" aria-hidden="true"><use href="#s-d"/></svg>No sign-in needed</li>
+          <li><svg class="suit" aria-hidden="true"><use href="#s-h"/></svg>Android, iPhone and iPad play together online</li>
+        </ul>
+        <a class="hero__see" href="#see"><i><svg aria-hidden="true"><use href="#i-play"/></svg></i>See a game played</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Real play -->
+  <section class="section see" id="see" aria-labelledby="see-title">
+    <div class="wrap see__grid">
+      <div class="see__head">
+        <p class="eyebrow" data-reveal>The rules you grew up with</p>
+        <h2 class="h2 d1" id="see-title" data-reveal>Beat what is on the table, or pass.</h2>
+        <p class="lead" data-reveal>The 3 of clubs opens every game. Play a single, a pair, a trio or a five-card hand — straight, flush, full house, four-of-a-kind, straight flush — then beat what is on the table, or pass. When everyone passes, the trick is yours to lead.</p>
+        <p class="rules-note" data-reveal><svg class="suit" aria-hidden="true"><use href="#s-d"/></svg>Shown here: the rules of Pusoy Dos · Philippines, the game's default.</p>
+      </div>
+
+      <div class="see__media" data-reveal>
+        <div class="phone">
+          <div class="phone__screen">
+            <video class="clip-video" width="540" height="880" muted playsinline loop controls preload="none"
+              poster="/assets/video/gameplay-poster.webp" data-cues="0 5.8 8.7 11.6 16.3"
+              aria-label="Gameplay from Tres – Pusoy Dos" aria-describedby="clip-steps">
+              <source src="/assets/video/gameplay.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="see__bar">
+          <button class="see__toggle" type="button" data-state="playing">
+            <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+            <span class="see__toggle-text">Pause</span><span class="sr-only"> the gameplay video</span>
+          </button>
+          <p class="see__live" aria-hidden="true"></p>
+        </div>
+        <p class="see__caption">Real play, recorded from Tres 2.5.0, solo against three AI opponents. The waits before each play are cut short.</p>
+      </div>
+
+      <div class="see__steps">
+        <div data-reveal>
+          <ol class="clip" id="clip-steps" aria-label="In this clip">
+            <li data-live="A new game deals thirteen cards each."><span class="clip__mark" aria-hidden="true"></span><span><b>A new game deals thirteen cards each.</b></span></li>
+            <li data-live="You open with a club flush."><span class="clip__mark" aria-hidden="true"></span><span><b>You open with a club flush.</b> The first play must include the 3 of clubs, and this one does.</span></li>
+            <li data-live="A hearts flush beats it."><span class="clip__mark" aria-hidden="true"></span><span><b>An AI opponent beats it with a hearts flush.</b> Between two flushes the suit decides first, so hearts beat clubs — even clubs topped by a 2.</span></li>
+            <li data-live="Another game: you’re already out in 1st."><span class="clip__mark" aria-hidden="true"></span><span><b>Another game: you have already finished 1st.</b> An AI opponent goes out 3rd with a full house, the game ends, and your win lights up the table.</span></li>
+            <li data-live="You finished first. You win!"><span class="clip__mark" aria-hidden="true"></span><span><b>You finished first.</b> You win!</span></li>
+          </ol>
+        </div>
+        <div class="hands" data-reveal>
+          <p class="hands__title" id="hands-title">Five-card hands, lowest to highest</p>
+          <ol class="hands__list" aria-labelledby="hands-title">
+            <li class="hand"><span class="pcards" role="img" aria-label="7 of hearts, 8 of clubs, 9 of spades, 10 of diamonds, jack of hearts"><span class="pc is-red"><b>7<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-black"><b>8<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>9<svg class="suit"><use href="#s-s"/></svg></b></span><span class="pc is-red"><b>10<svg class="suit"><use href="#s-d"/></svg></b></span><span class="pc is-red"><b>J<svg class="suit"><use href="#s-h"/></svg></b></span></span><span class="hand__text"><b>Straight</b>Five ranks in a row. A 2 never plays in one.</span></li>
+            <li class="hand" data-lit="1 2"><span class="pcards" role="img" aria-label="3 of clubs, 7 of clubs, 10 of clubs, king of clubs, 2 of clubs"><span class="pc is-black"><b>3<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>7<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>10<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>K<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>2<svg class="suit"><use href="#s-c"/></svg></b></span></span><span class="hand__text"><b>Flush</b>Five cards of one suit.</span></li>
+            <li class="hand" data-lit="3"><span class="pcards" role="img" aria-label="5 of clubs, 5 of spades, 5 of hearts, 10 of clubs, 10 of diamonds"><span class="pc is-black"><b>5<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>5<svg class="suit"><use href="#s-s"/></svg></b></span><span class="pc is-red"><b>5<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-black"><b>10<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-red"><b>10<svg class="suit"><use href="#s-d"/></svg></b></span></span><span class="hand__text"><b>Full House</b>A trio and a pair.</span></li>
+            <li class="hand"><span class="pcards" role="img" aria-label="9 of clubs, 9 of spades, 9 of hearts, 9 of diamonds, 4 of spades"><span class="pc is-black"><b>9<svg class="suit"><use href="#s-c"/></svg></b></span><span class="pc is-black"><b>9<svg class="suit"><use href="#s-s"/></svg></b></span><span class="pc is-red"><b>9<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-red"><b>9<svg class="suit"><use href="#s-d"/></svg></b></span><span class="pc is-black"><b>4<svg class="suit"><use href="#s-s"/></svg></b></span></span><span class="hand__text"><b>Four-of-a-Kind</b>Four of one rank, plus any one card.</span></li>
+            <li class="hand"><span class="pcards" role="img" aria-label="6 of hearts, 7 of hearts, 8 of hearts, 9 of hearts, 10 of hearts"><span class="pc is-red"><b>6<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-red"><b>7<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-red"><b>8<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-red"><b>9<svg class="suit"><use href="#s-h"/></svg></b></span><span class="pc is-red"><b>10<svg class="suit"><use href="#s-h"/></svg></b></span></span><span class="hand__text"><b>Straight Flush</b>A straight, all in one suit.</span></li>
+          </ol>
+          <p class="hands__note">A higher hand beats a lower one, whatever its cards.</p>
+        </div>
+        <p class="see__after" data-reveal>The moment a player runs out of cards the trick ends right there, and the next player leads a fresh one. Every game runs all the way out to a full 1st, 2nd, 3rd and 4th place — it is not over the moment someone wins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Three ways to play -->
+  <section class="section rule-top" id="ways" aria-labelledby="ways-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow" data-reveal>Three ways to play</p>
+        <h2 class="h2" id="ways-title" data-reveal>Solo, together, or online.</h2>
+        <p class="lead" data-reveal>Solo and same Wi-Fi play run on your devices. Start a hand on the bus, in a queue, or with no signal at all: only Online play needs the internet.</p>
+      </div>
+
+      <div class="ways">
+        <article class="way" data-reveal="deal" aria-labelledby="way-solo">
+          <span class="way__index" aria-hidden="true">1<svg class="suit"><use href="#s-c"/></svg></span>
+          <div class="seats" aria-hidden="true">
+            <div class="seats__table"></div>
+            <span class="seat seat--you"><i><svg class="suit"><use href="#s-c"/></svg></i>You</span>
+            <span class="seat seat--ai"><i><svg><use href="#i-robot"/></svg></i>AI</span>
+            <span class="seat seat--ai"><i><svg><use href="#i-robot"/></svg></i>AI</span>
+            <span class="seat seat--ai"><i><svg><use href="#i-robot"/></svg></i>AI</span>
+          </div>
+          <div>
+            <p class="taglish" lang="tl">Walang baraha? May Tres.</p>
+            <h3 class="h3" id="way-solo">Solo, against three AI opponents</h3>
+            <p>Easy, Standard or Expert. Easy plays its weakest cards first, Standard keeps track of every card played, and Expert looks ahead. None of them ever sees your cards.</p>
+            <ul class="way__tags"><li>Works offline</li><li>Three levels</li></ul>
+          </div>
+        </article>
+
+        <article class="way d1" data-reveal="deal" aria-labelledby="way-wifi">
+          <span class="way__index" aria-hidden="true">2<svg class="suit"><use href="#s-h"/></svg></span>
+          <div class="seats" aria-hidden="true">
+            <div class="seats__table"></div>
+            <div class="seats__wifi"><svg><use href="#i-wifi"/></svg></div>
+            <span class="seat seat--you"><i><svg class="suit"><use href="#s-c"/></svg></i>You</span>
+            <span class="seat seat--friend"><i><svg><use href="#i-person"/></svg></i>Friend</span>
+            <span class="seat seat--friend"><i><svg><use href="#i-person"/></svg></i>Friend</span>
+            <span class="seat seat--ai"><i><svg><use href="#i-robot"/></svg></i>AI</span>
+          </div>
+          <div>
+            <p class="taglish" lang="tl">Kasama ang barkada?</p>
+            <h3 class="h3" id="way-wifi">Together, on the same Wi-Fi</h3>
+            <p>Same Wi-Fi, up to 4 players — no internet, no account. Host a room; friends pick it on the same Wi-Fi and type its Room Code, or scan your QR code. AI fills any open seats.</p>
+            <ul class="way__tags"><li>No internet</li><li>No account</li></ul>
+          </div>
+        </article>
+
+        <article class="way d2" data-reveal="deal" aria-labelledby="way-online">
+          <span class="way__index" aria-hidden="true">3<svg class="suit"><use href="#s-s"/></svg></span>
+          <div class="seats" aria-hidden="true">
+            <div class="seats__table"></div>
+            <div class="seats__code">Private room</div>
+            <span class="seat seat--you"><i><svg class="suit"><use href="#s-c"/></svg></i>You</span>
+            <span class="seat seat--friend"><i><svg><use href="#i-person"/></svg></i>Friend</span>
+            <span class="seat seat--friend"><i><svg><use href="#i-person"/></svg></i>Friend</span>
+            <span class="seat seat--ai"><i><svg><use href="#i-robot"/></svg></i>AI</span>
+          </div>
+          <div>
+            <p class="taglish" lang="tl">Malayo ang barkada?</p>
+            <h3 class="h3" id="way-online">Online, in a private room</h3>
+            <p>Make a private room and share its code, or invite a friend by their Player Code. Everyone at the table is invited or approved, AI fills any open seats, and there are no ads in Online rooms.</p>
+            <ul class="way__tags"><li>No sign-in</li><li>Android, iPhone and iPad together</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · The order of the cards -->
+  <section class="section rule-top" id="order" aria-labelledby="order-title">
+    <div class="wrap order__grid">
+      <div class="order__visual">
+        <div class="ranks" data-reveal role="img" aria-label="The thirteen ranks from lowest to highest: 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace, 2. The lowest card is the 3 of clubs; the highest is the 2 of diamonds.">
+          <span class="mini mini--end is-black"><b>3<svg class="suit"><use href="#s-c"/></svg></b></span>
+          <span class="mini is-red"><b>4<svg class="suit"><use href="#s-d"/></svg></b></span>
+          <span class="mini is-black"><b>5<svg class="suit"><use href="#s-s"/></svg></b></span>
+          <span class="mini is-red"><b>6<svg class="suit"><use href="#s-h"/></svg></b></span>
+          <span class="mini is-black"><b>7<svg class="suit"><use href="#s-c"/></svg></b></span>
+          <span class="mini is-red"><b>8<svg class="suit"><use href="#s-d"/></svg></b></span>
+          <span class="mini is-black"><b>9<svg class="suit"><use href="#s-s"/></svg></b></span>
+          <span class="mini is-red"><b>10<svg class="suit"><use href="#s-h"/></svg></b></span>
+          <span class="mini is-black"><b>J<svg class="suit"><use href="#s-c"/></svg></b></span>
+          <span class="mini is-red"><b>Q<svg class="suit"><use href="#s-d"/></svg></b></span>
+          <span class="mini is-black"><b>K<svg class="suit"><use href="#s-s"/></svg></b></span>
+          <span class="mini is-red"><b>A<svg class="suit"><use href="#s-h"/></svg></b></span>
+          <span class="mini mini--end is-red"><b>2<svg class="suit"><use href="#s-d"/></svg></b></span>
+          <span class="ranks__label ranks__label--low" aria-hidden="true">Lowest</span>
+          <span class="ranks__label ranks__label--high" aria-hidden="true">Highest</span>
+        </div>
+        <ol class="suits" aria-label="Suits from lowest to highest" data-reveal>
+          <li><span class="is-black"><svg class="suit" aria-hidden="true"><use href="#s-c"/></svg></span>Clubs</li>
+          <li class="lt" aria-hidden="true">&lt;</li>
+          <li><span class="is-black"><svg class="suit" aria-hidden="true"><use href="#s-s"/></svg></span>Spades</li>
+          <li class="lt" aria-hidden="true">&lt;</li>
+          <li><span class="is-red"><svg class="suit" aria-hidden="true"><use href="#s-h"/></svg></span>Hearts</li>
+          <li class="lt" aria-hidden="true">&lt;</li>
+          <li><span class="is-red"><svg class="suit" aria-hidden="true"><use href="#s-d"/></svg></span>Diamonds</li>
+        </ol>
+      </div>
+
+      <div class="order__copy">
+        <p class="eyebrow" data-reveal>Know the order</p>
+        <h2 class="h2" id="order-title" data-reveal>From 3 up to 2.</h2>
+        <p class="lead" data-reveal>The 3 is the lowest rank and the 2 the highest. When two cards share a rank, the suit decides: clubs, then spades, then hearts, with diamonds on top. So the 3 of clubs is the lowest card in the deck — the one that opens the game — and the 2 of diamonds is the highest.</p>
+        <p class="order__sets" data-reveal>These are the rules of Pusoy Dos · Philippines, the game's default. It also offers four more rule sets: <b>Big 2 · Malaysia, global</b>, <b>Capsa Banting · Indonesia</b>, <b><span lang="zh-Hant">大老二</span> · Da Lao Er · Taiwan</b> and <b><span lang="zh-Hant">鋤大D</span> · Chor Dai Di · Hong Kong</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Themes -->
+  <section class="section rule-top" id="themes" aria-labelledby="themes-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow" data-reveal>Themes and card decks</p>
+        <h2 class="h2" id="themes-title" data-reveal>Make the table yours.</h2>
+        <p class="lead" data-reveal>Unlock complete table themes with Cosmetic Tokens earned by playing and collecting Milestones, or buy a theme or token bundle in the optional Shop.</p>
+      </div>
+
+      <div class="themes" data-reveal>
+        <figure class="theme"><img src="/assets/img/themes/first-light.webp" width="480" height="815" loading="lazy" decoding="async" alt="The First Light table: green felt, cream cards, a gold turn light. The hand holds the 3 of clubs, and the table says the first play must include it."></figure>
+        <figure class="theme"><img src="/assets/img/themes/perlas.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Perlas table: deep teal felt with a sea-glass turn light."></figure>
+        <figure class="theme"><img src="/assets/img/themes/violet-hour.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Violet Hour table: violet felt, with court cards drawn as figures in a spotlight."></figure>
+        <figure class="theme"><img src="/assets/img/themes/manila-bay.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Manila Bay table: warm sunset felt, with court cards showing a boat on the bay at sundown."></figure>
+      </div>
+      <p class="themes__hint" aria-hidden="true">Swipe for more tables</p>
+
+      <div class="decks">
+        <figure class="courts" data-reveal aria-label="Court cards from five Theme Packs: First Light, Violet Hour, Manila Bay, Evergrove and Neon Coast">
+          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">K<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/first-light-king-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="First Light's king"></span></div></div></div>
+          <div class="slot"><div class="card"><div class="card__face is-black"><span class="idx">K<svg class="suit"><use href="#s-s"/></svg></span><span class="court-art"><img src="/assets/img/courts/violet-hour-king-black.webp" width="157" height="300" loading="lazy" decoding="async" alt="Violet Hour's king, a figure in a spotlight"></span></div></div></div>
+          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">Q<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/manila-bay-queen-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Manila Bay's queen, a boat on the bay at sundown"></span></div></div></div>
+          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">K<svg class="suit"><use href="#s-d"/></svg></span><span class="court-art"><img src="/assets/img/courts/evergrove-king-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Evergrove's king, in an arch of gold leaf"></span></div></div></div>
+          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">Q<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/neon-coast-queen-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Neon Coast's queen, drawn in glowing neon tube"></span></div></div></div>
+        </figure>
+        <div class="decks__copy">
+          <h3 class="h3" data-reveal>Eight Theme Packs, and Card Decks to wear with them</h3>
+          <p data-reveal>First Light is the free default. Perlas, Violet Hour, Manila Bay, Pixel, Piso Arcade, Evergrove and Neon Coast are Theme Packs to unlock with tokens or buy. Heirloom, Afterglow, Deco Sunburst and Crown Jewels are Card Decks to unlock or buy and wear with any theme; the Champion's Deck is never sold — you win it on the Tour.</p>
+          <p class="mute" data-reveal>Every purchase is cosmetic only: it changes how the table looks and sounds, never the cards, rules, or opponent strength.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · More at the table -->
+  <section class="section rule-top" id="more" aria-labelledby="more-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow" data-reveal>More at the table</p>
+        <h2 class="h2" id="more-title" data-reveal>More to play, more to chase.</h2>
+      </div>
+      <ul class="features" data-reveal>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-c"/></svg></span><h3>The Tour</h3><p>Ten stops, each with its own opponents and goal. Clear them all to win the Champion's Deck.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-d"/></svg></span><h3>Daily Deal</h3><p>The same deal for everyone, every day. Make or beat par for bonus tokens.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-h"/></svg></span><h3>Series</h3><p>Play a Series of 3 or 5 Games. Every Game earns points, and the highest total after the last Game wins.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-s"/></svg></span><h3>Milestones</h3><p>97 goals worth chasing, and Cosmetic Tokens to collect.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-c"/></svg></span><h3>Pick up where you left off</h3><p>Close the app in the middle of a hand and come back to the same table — same cards, same turn, same position.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-d"/></svg></span><h3>Learn as you play</h3><p>A short, skippable tutorial covers the basics, and the full rules are one tap away whenever you need them.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-h"/></svg></span><h3>Your hand, your order</h3><p>Sort by rank, sort by suit, or drag your cards into an order that is yours. Tres remembers it.</p></li>
+        <li class="feature"><span class="feature__icon" aria-hidden="true"><svg class="suit"><use href="#s-s"/></svg></span><h3>Built to be read easily</h3><p>Switch on four-colour suits for faster reading and size the text to suit you. On Android, hear every play at the table narrated by your screen reader.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7 · Straight talk -->
+  <section class="section" id="fair" aria-labelledby="fair-title">
+    <div class="wrap">
+      <h2 class="sr-only" id="fair-title">Ads, sign-in and privacy</h2>
+      <div class="fair" data-reveal>
+        <div class="fair__item">
+          <h3 class="h3">Honest about ads</h3>
+          <p>Tres is free and shows ads: full-screen ads between games, and one small banner on Home. Never in the middle of a hand, and never in Online rooms. Watching an ad to earn tokens is always your choice, and nothing in the game is locked behind one. Offline, there are no ads at all.</p>
+        </div>
+        <div class="fair__item">
+          <h3 class="h3">No sign-in needed</h3>
+          <p>Solo and same Wi-Fi play need no account. Online play needs no sign-in either: it makes a private guest profile for you.</p>
+        </div>
+        <div class="fair__item">
+          <h3 class="h3">Clear about privacy</h3>
+          <p>Solo and same Wi-Fi play run on your devices and do not contact our Online service. Google serves the ads and may collect data such as your device's advertising ID to do it; you choose whether ads may be personalized. The <a href="https://northpixelhq.github.io/pusoy/privacy-policy">privacy policy</a> says exactly what is stored and sent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · The last word -->
+  <section class="section final" id="get" aria-labelledby="final-title" data-final>
+    <div class="wrap">
+      <div class="final__mark" data-reveal>
+        <span class="final__halo" aria-hidden="true"></span>
+        <span class="pulse" aria-hidden="true"></span><span class="pulse" aria-hidden="true"></span><span class="pulse" aria-hidden="true"></span>
+        <img class="final__icon" src="/assets/img/icon-256.webp" width="112" height="112" loading="lazy" decoding="async" alt="The Tres – Pusoy Dos app icon: the three of clubs on green felt">
+      </div>
+      <h2 class="h2" id="final-title" data-reveal>Your next game starts here.</h2>
+      <p class="taglish" lang="tl" data-reveal>Sino ang una mong iimbitahan?</p>
+      <p class="lead" data-reveal>Free on Google Play for Android, and on the App Store for iPhone and iPad.</p>
+      <div class="stores stores--pair" data-reveal>
+        <a class="store store--gold" data-store="play" href="https://play.google.com/store/apps/details?id=dev.tres.app">
+          <span><span class="store__pre">For Android</span><span class="store__name">Google Play</span></span>
+          <svg class="store__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="store store--gold" data-store="apple" href="https://apps.apple.com/app/id6815482151">
+          <span><span class="store__pre">For iPhone and iPad</span><span class="store__name">App Store</span></span>
+          <svg class="store__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- partial:getbar -->
+<div class="getbar" data-getbar aria-hidden="true">
+  <img src="/assets/img/icon-96.webp" width="40" height="40" alt="">
+  <div class="getbar__text"><b>Tres – Pusoy Dos</b><span>Free · No sign-in needed</span></div>
+  <a class="btn btn--gold" href="/get/" data-get tabindex="-1">Get Tres</a>
+</div>
+<!-- /partial:getbar -->
+
+<!-- partial:footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img src="/assets/img/icon-96.webp" width="48" height="48" loading="lazy" decoding="async" alt="">
+          <div><b>Tres – Pusoy Dos</b>A card game by North Pixel Labs</div>
+        </div>
+        <p>Questions or feedback? Email <a href="mailto:northpixellabs@gmail.com">northpixellabs@gmail.com</a></p>
+      </div>
+      <nav class="footer__col" aria-labelledby="f-get">
+        <h2 id="f-get">Get the game</h2>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=dev.tres.app">Google Play, for Android</a></li>
+          <li><a href="https://apps.apple.com/app/id6815482151">App Store, for iPhone and iPad</a></li>
+          <li><a href="/get/">One link for any phone</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-labelledby="f-learn">
+        <h2 id="f-learn">Learn</h2>
+        <ul>
+          <li><a href="/how-to-play/">How to play Pusoy Dos</a></li>
+          <li><a href="/play-online/">Play online with friends</a></li>
+          <li><a href="/faq/">Questions and answers</a></li>
+          <li><a href="/media-kit/">Media kit</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-labelledby="f-legal">
+        <h2 id="f-legal">Legal</h2>
+        <ul>
+          <li><a href="https://northpixelhq.github.io/pusoy/privacy-policy">Privacy policy</a></li>
+          <li><a href="https://northpixelhq.github.io/pusoy/online-terms">Online Terms</a></li>
+          <li><a href="https://northpixelhq.github.io/pusoy/delete-online-profile">Delete your Online profile</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__legal">
+      <p>Tres – Pusoy Dos is made by North Pixel Labs.</p>
+      <p>Google Play, Google Play Games and Android are trademarks of Google LLC. iPhone, iPad and Game Center are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+    </div>
+  </div>
+</footer>
+<!-- /partial:footer -->
+</body>
+</html>

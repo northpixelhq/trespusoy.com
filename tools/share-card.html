@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Share card source</title>
+<!-- The source of the link-preview pictures, assets/img/share*.jpg (1200 x 630).
+     This file has no script and shows only its own fixed words. To render a
+     page's own picture, tools/build_share.sh writes a temporary copy with that
+     page's words (HTML-escaped) into tools/.render/, which git ignores and is
+     never published, renders it through the local server and deletes it.
+     Not linked from the site. -->
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+  body { background: var(--felt-shade); }
+  .share {
+    position: relative; width: 1200px; height: 630px; overflow: hidden;
+    background:
+      radial-gradient(60% 75% at 74% 42%, rgba(150, 180, 150, 0.34), rgba(31, 67, 47, 0.2) 55%, transparent 80%),
+      linear-gradient(180deg, var(--felt) 0%, var(--felt-low) 55%, var(--felt-shade) 100%);
+  }
+  .share::after {
+    content: ""; position: absolute; left: 470px; top: 92px; width: 860px; height: 470px;
+    border-radius: 50%; border: 1px solid rgba(236, 224, 200, 0.08);
+  }
+  .copy { position: absolute; left: 84px; top: 116px; width: 500px; }
+  .copy .eyebrow { font-size: 17px; letter-spacing: 0.26em; margin-bottom: 14px; color: var(--gold); }
+  .copy .wordmark { justify-items: start; }
+  .copy .wordmark__tres { font-size: 150px; margin: 0 0 0 -6px; }
+  .copy .wordmark__rule { margin: 18px 0 14px; }
+  .copy .wordmark__rule::before { width: 0; margin-right: -10px; }
+  .copy .wordmark__rule::after { width: 120px; }
+  .copy .wordmark__sub { font-size: 25px; margin: 0; }
+  .copy p { margin: 32px 0 0; font-size: 24px; line-height: 1.45; color: var(--text-soft); }
+  .stage { position: absolute; left: 608px; top: 0; width: 540px; height: 630px; margin: 0; --cw: 180px; }
+  .stage__fan { bottom: 108px; }
+  .halo { opacity: 0.9; }
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+  <symbol id="s-c" viewBox="0 0 100 100"><circle cx="50" cy="26" r="24"/><circle cx="26" cy="60" r="24"/><circle cx="74" cy="60" r="24"/><circle cx="50" cy="55" r="7"/><path d="M42 100h16l-4-40h-8z"/></symbol>
+  <symbol id="s-s" viewBox="0 0 100 100"><path d="M50 2C-15 45 8 98 50 70C92 98 115 45 50 2Z"/><path d="M42 100h16l-4-30h-8z"/></symbol>
+  <symbol id="s-h" viewBox="0 0 100 100"><path d="M50 22C45.5 10 37.5 5 29 5C16 5 6 16 6 31C6 56 37 73 50 95C63 73 94 56 94 31C94 16 84 5 71 5C62.5 5 54.5 10 50 22Z"/></symbol>
+  <symbol id="s-d" viewBox="0 0 100 100"><path d="M50 1Q65.69 26.9 85.28 50Q65.69 73.1 50 99Q34.31 73.1 14.72 50Q34.31 26.9 50 1Z"/></symbol>
+</svg>
+<div class="share">
+  <div class="copy">
+    <p class="eyebrow" id="eyebrow">Tara, Pusoy Dos!</p>
+    <div class="wordmark">
+      <span class="wordmark__tres">Tres</span>
+      <span class="wordmark__rule"><svg class="suit"><use href="#s-d"/></svg></span>
+      <span class="wordmark__sub">Pusoy Dos</span>
+    </div>
+    <p id="line">The Filipino card classic, also known as Big Two. Free on Android, iPhone and iPad.</p>
+  </div>
+  <div class="stage">
+    <div class="stage__fan">
+      <div class="slot slot--a"><div class="float"><div class="lift"><div class="card">
+        <div class="card__face is-red"><span class="idx">A<svg class="suit"><use href="#s-h"/></svg></span><span class="pips pips--1"><svg class="suit"><use href="#s-h"/></svg></span></div>
+      </div></div></div></div>
+      <div class="slot slot--b"><div class="float"><div class="lift"><div class="card">
+        <div class="card__face is-black"><span class="idx">2<svg class="suit"><use href="#s-s"/></svg></span><span class="pips pips--2"><svg class="suit"><use href="#s-s"/></svg><svg class="suit"><use href="#s-s"/></svg></span></div>
+      </div></div></div></div>
+      <div class="slot slot--c"><div class="float"><div class="lift">
+        <div class="halo"></div>
+        <div class="card">
+          <div class="card__face is-black"><span class="idx">3<svg class="suit"><use href="#s-c"/></svg></span><span class="pips pips--3"><svg class="suit"><use href="#s-c"/></svg><svg class="suit"><use href="#s-c"/></svg><svg class="suit"><use href="#s-c"/></svg></span></div>
+        </div>
+      </div></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
