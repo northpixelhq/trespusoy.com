@@ -45,6 +45,10 @@ which writes them into every page between `<!-- partial:NAME -->` markers.
 checks every page: local links and assets resolve, anchors exist, nothing loads
 from another site, the security policy and shared parts are in step, each page
 has its own title, description and share picture, and the sitemap lists them.
+It also runs `tools/video_check.py` on every video, which fails a clip whose
+keyframes redraw a still picture (the "pop" of an over-starved encode); that
+needs ffmpeg and ffprobe. `tools/build_video.sh` runs the same test and
+refuses to write a clip that fails it.
 
 ## The security policy
 

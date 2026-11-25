@@ -21,6 +21,19 @@
 #                        and the win lights up the table
 #   take19  53.00-55.80  the result: "You win!"
 #
+# The encoding was chosen by measurement (2026-11-25). With a keyframe every
+# 240 frames, x264 redrew the dark, finely textured table at each keyframe and
+# the still picture jumped by 1.1 to 1.7 luma levels (3.3 in one region): a
+# visible pop every four seconds. More bits did not cure it (CRF 20 doubled the
+# file and still jumped 2.1), nor did a different tune. What did: no periodic
+# keyframes at all (-g 9999). The only keyframes are the first frame and the
+# encoder's own at the cut to the result screen, where the picture really
+# changes. The long group of pictures also absorbs the recordings' own faint
+# keyframe pops (0.4 to 0.5). CRF 24 then keeps the picture a little truer to
+# the source than the old encode (42.4 against 41.5 dB luma PSNR) for 4 % more
+# bytes. 60 frames a second stays: at this size 30 would save only 5 %, since
+# still frames cost almost nothing, and the card throws are 240 ms motions.
+#
 # Output: assets/video/gameplay.mp4 (H.264, 540 x 880, 60 fps, no sound) and
 # assets/video/gameplay-poster.webp. The home page's cue times (data-cues on
 # the video) are the moments in the finished loop where each step begins.
@@ -51,7 +64,13 @@ FELT=0x0E2C1E
 [u]trim=53.0:55.8,setpts=PTS-STARTPTS,fade=t=out:st=2.45:d=0.35:color=$FELT[f];
 [a][b][c][d][e][f]concat=n=6:v=1:a=0,format=yuv420p[v]" \
   -map "[v]" -an -c:v libx264 -profile:v high -level 4.0 -preset veryslow \
-  -tune animation -crf ${CRF:-26} -g 240 -movflags +faststart "$OUT/gameplay.mp4"
+  -tune animation -crf ${CRF:-24} -g 9999 -keyint_min 9999 \
+  -movflags +faststart "$TMP/gameplay.mp4"
+
+# The clip must not "pop": no keyframe may redraw a still picture. The check
+# fails the build before anything is written to the site.
+python3 "$ROOT/tools/video_check.py" "$TMP/gameplay.mp4"
+mv "$TMP/gameplay.mp4" "$OUT/gameplay.mp4"
 
 # The poster is the flush landing on the table, the game's first play.
 "$FF" -v error -y -ss ${POSTER_AT:-6.9} -i "$OUT/gameplay.mp4" -frames:v 1 "$TMP/poster.png"

@@ -8,7 +8,9 @@ nothing is loaded from another site, the security policy's hashes match
 (tools/csp.py --check), the shared header and footer are in step
 (tools/sync_partials.py --check), every page has its own title, description
 and share picture, and every page but the not-found page and /get/ (a redirect) is in the sitemap.
-No published store screenshot may be one that shows a room code. Outside links are listed for a person to check, since
+No published store screenshot may be one that shows a room code, and every
+video must pass tools/video_check.py (no keyframe may redraw a still picture;
+needs ffmpeg). Outside links are listed for a person to check, since
 this script makes no network request.
 """
 import html.parser
@@ -119,6 +121,16 @@ def main() -> int:
         for needle in ("location.search", "URLSearchParams", "location.hash"):
             if needle in text and page.relative_to(ROOT).as_posix() != "get/index.html":
                 problems.append(f"{page.relative_to(ROOT)}: reads its own address ({needle})")
+    # Every video must pass the keyframe-pop test (tools/video_check.py),
+    # so a clip whose still picture jumps at its keyframes cannot be published.
+    for clip in sorted(ROOT.rglob("*.mp4")):
+        if "tools" in clip.relative_to(ROOT).parts:
+            continue
+        run = subprocess.run([sys.executable, str(ROOT / "tools" / "video_check.py"), str(clip)],
+                             capture_output=True, text=True)
+        if run.returncode:
+            detail = (run.stdout.strip().splitlines() or [run.stderr.strip()])[-1]
+            problems.append(f"{clip.relative_to(ROOT)}: fails the keyframe-pop test: {detail}")
     for coded in ("02-same-room-gameplay", "04-join-by-room-code", "08-find-nearby-room"):
         for found in ROOT.rglob(f"{coded}*"):
             problems.append(f"{found.relative_to(ROOT)}: this store screenshot shows a room code")
