@@ -29,3 +29,9 @@ the game's First Light palette (`mobile/app/lib/theme/palette.dart`).
 Google Play and Android are trademarks of Google LLC. iPhone, iPad and Game
 Center are trademarks of Apple Inc. App Store is a service mark of Apple Inc.
 The store buttons are this site's own design; no store badge artwork is used.
+
+The Facebook "f" mark and the Instagram glyph, trademarks of Meta Platforms,
+Inc., are drawn as inline SVG in their standard shapes, in one flat colour,
+only to link to the game's own pages (facebook.com/trespusoydos and
+instagram.com/trespusoydos). Nothing is loaded from either company: no
+script, pixel, embed or image.

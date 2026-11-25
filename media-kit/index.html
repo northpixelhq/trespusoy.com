@@ -87,6 +87,9 @@
   <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <!-- Facebook's "f" mark and Instagram's glyph, trademarks of Meta Platforms, Inc., drawn in their standard shapes to link to the game's own pages. -->
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 1h10a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H7a6 6 0 0 1-6-6V7a6 6 0 0 1 6-6Zm0 2.1A3.9 3.9 0 0 0 3.1 7v10A3.9 3.9 0 0 0 7 20.9h10a3.9 3.9 0 0 0 3.9-3.9V7A3.9 3.9 0 0 0 17 3.1Z"/><path fill-rule="evenodd" d="M12 6.4a5.6 5.6 0 1 1 0 11.2 5.6 5.6 0 0 1 0-11.2Zm0 2.1a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><circle cx="17.85" cy="6.15" r="1.35"/></symbol>
 </svg>
 <!-- /partial:sprite -->
 <!-- partial:header -->
@@ -102,6 +105,10 @@
       <a href="/faq/">Questions</a>
       <a href="/media-kit/" aria-current="page">Media kit</a>
     </nav>
+    <div class="follow follow--header" role="group" aria-label="Follow us">
+      <span class="follow__label" aria-hidden="true">Follow us</span>
+      <a class="follow__icon" href="https://www.facebook.com/trespusoydos" rel="noreferrer" aria-label="Tres – Pusoy Dos on Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a><a class="follow__icon" href="https://www.instagram.com/trespusoydos/" rel="noreferrer" aria-label="Tres – Pusoy Dos on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+    </div>
     <a class="btn btn--gold" href="/get/" data-get>Get Tres</a>
     <details class="menu">
       <summary aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
@@ -111,6 +118,10 @@
         <a href="/play-online/">Play online with friends</a>
         <a href="/faq/">Questions and answers</a>
         <a href="/media-kit/" aria-current="page">Media kit</a>
+        <div class="follow follow--menu" role="group" aria-label="Follow us">
+          <span class="follow__label">Follow us</span>
+          <a class="follow__pill" href="https://www.facebook.com/trespusoydos" rel="noreferrer" aria-label="Tres – Pusoy Dos on Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span></a><a class="follow__pill" href="https://www.instagram.com/trespusoydos/" rel="noreferrer" aria-label="Tres – Pusoy Dos on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a>
+        </div>
       </nav>
     </details>
   </div>
@@ -123,6 +134,12 @@
         <p class="eyebrow">Media kit</p>
         <h1 class="h1" id="title">Media kit</h1>
         <p class="lead">For anyone writing about Tres – Pusoy Dos: the icon, screenshots from the stores, a gameplay clip, the descriptions and the names, written the right way.</p>
+<!-- partial:follow -->
+<div class="follow follow--top" role="group" aria-label="Follow us">
+  <span class="follow__label">Follow us</span>
+  <a class="follow__pill" href="https://www.facebook.com/trespusoydos" rel="noreferrer" aria-label="Tres – Pusoy Dos on Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span></a><a class="follow__pill" href="https://www.instagram.com/trespusoydos/" rel="noreferrer" aria-label="Tres – Pusoy Dos on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a>
+</div>
+<!-- /partial:follow -->
       </div>
       <div class="page-head__art" aria-hidden="true"><img class="kit-icon" src="/assets/img/icon-256.webp" width="168" height="168" alt=""></div>
     </div>
@@ -238,6 +255,7 @@
       <section id="contact" aria-labelledby="contact-h">
         <h2 id="contact-h">Contact</h2>
         <p>For questions, interviews or other material, email North Pixel Labs at <a href="mailto:northpixellabs@gmail.com">northpixellabs@gmail.com</a>.</p>
+        <p>Follow the game on Facebook at <a href="https://www.facebook.com/trespusoydos" rel="noreferrer">facebook.com/trespusoydos</a> and on Instagram at <a href="https://www.instagram.com/trespusoydos/" rel="noreferrer">instagram.com/trespusoydos</a>.</p>
       </section>
     </article>
   </div>
@@ -276,6 +294,10 @@
           <div><b>Tres – Pusoy Dos</b>A card game by North Pixel Labs</div>
         </div>
         <p>Questions or feedback? Email <a href="mailto:northpixellabs@gmail.com">northpixellabs@gmail.com</a></p>
+        <div class="follow follow--footer" role="group" aria-label="Follow us">
+          <span class="follow__label">Follow us</span>
+          <a class="follow__pill" href="https://www.facebook.com/trespusoydos" rel="noreferrer" aria-label="Tres – Pusoy Dos on Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span></a><a class="follow__pill" href="https://www.instagram.com/trespusoydos/" rel="noreferrer" aria-label="Tres – Pusoy Dos on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a>
+        </div>
       </div>
       <nav class="footer__col" aria-labelledby="f-get">
         <h2 id="f-get">Get the game</h2>
@@ -305,7 +327,7 @@
     </div>
     <div class="footer__legal">
       <p>Tres – Pusoy Dos is made by North Pixel Labs.</p>
-      <p>Google Play, Google Play Games and Android are trademarks of Google LLC. iPhone, iPad and Game Center are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+      <p>Google Play, Google Play Games and Android are trademarks of Google LLC. iPhone, iPad and Game Center are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Facebook and Instagram are trademarks of Meta Platforms, Inc.</p>
     </div>
   </div>
 </footer>

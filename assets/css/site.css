@@ -296,6 +296,57 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
   .brand__word { font-size: 22px; }
 }
 
+/* ---------- Follow us ----------------------------------------------- */
+/* Links to the game's own Facebook and Instagram pages. On a phone they sit
+   just under the top of each page (below the store buttons on the home
+   page), in the menu and in the footer; from 600 px wide they sit in the
+   header itself. The marks are Meta's, in one flat colour. */
+
+.follow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.follow__label { font-size: 13px; color: var(--text-mute); letter-spacing: 0.02em; margin-right: 2px; }
+.follow svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+.follow__icon {
+  display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 12px;
+  color: var(--text);
+  transition: color 160ms var(--settle), background-color 160ms var(--settle);
+}
+.follow__icon:hover { color: #fff; background: rgba(236, 224, 200, 0.08); }
+.follow__icon svg { width: 20px; height: 20px; }
+.follow__pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 14px 0 12px; border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  color: var(--text); text-decoration: none; font-size: 14px; font-weight: 700;
+  transition: border-color 160ms var(--settle), color 160ms var(--settle);
+}
+.follow__pill:hover { color: #fff; border-color: var(--gold); }
+.follow--header { display: none; }
+.follow--top { margin: 18px 0 0; justify-content: center; }
+.follow--menu { margin: 6px 0 2px; padding: 12px 8px 6px; border-top: 1px solid var(--line); }
+.follow--menu .follow__label { flex-basis: 100%; }
+.follow--footer { margin-top: 18px; }
+@media (min-width: 600px) {
+  .follow--top { display: none; }
+  .follow--header { display: flex; gap: 0; }
+  .follow--header .follow__label { display: none; margin-right: 4px; }
+}
+@media (min-width: 720px) and (max-width: 959px) { .follow--header .follow__label { display: inline; } }
+@media (min-width: 960px) {
+  .follow--header { flex-wrap: nowrap; padding-left: 14px; border-left: 1px solid var(--line); }
+  .nav a { white-space: nowrap; }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  .site-header__bar { gap: 18px; }
+  .nav { gap: 20px; }
+}
+@media (min-width: 1200px) { .follow--header .follow__label { display: inline; } }
+/* In the phone menu the two links are pills, not menu rows. */
+.menu__panel .follow__pill {
+  display: inline-flex; padding: 0 14px 0 12px; border-radius: 999px; font-size: 14px;
+}
+.menu__panel .follow__pill:hover { background: transparent; }
+
 /* ---------- Hero ---------------------------------------------------- */
 
 .hero {
@@ -343,6 +394,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .hero__copy > :nth-child(4) { animation-delay: 420ms; }
 .hero__copy > :nth-child(5) { animation-delay: 520ms; }
 .hero__copy > :nth-child(6) { animation-delay: 600ms; }
+.hero__copy > :nth-child(7) { animation-delay: 680ms; }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 
 .hero .eyebrow { margin-bottom: 8px; font-size: 12.5px; letter-spacing: 0.24em; }
@@ -1021,6 +1073,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
   animation: rise 700ms var(--settle) 140ms both;
 }
 .page-head .lead { margin: 18px 0 0; max-width: 34em; animation: rise 700ms var(--settle) 240ms both; }
+.page-head .follow--top { justify-content: flex-start; animation: rise 700ms var(--settle) 320ms both; }
 .page-head__art { display: flex; justify-content: center; min-height: 120px; }
 @media (min-width: 960px) {
   .page-head { padding: 148px 0 56px; }
@@ -1195,6 +1248,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .lost .h1 { font-size: clamp(42px, 11vw, 84px); }
 .lost .lead { margin: 18px auto 30px; max-width: 28em; }
 .lost__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; margin-top: 26px; }
+.lost .follow--top { margin-top: 26px; }
 
 .nav a[aria-current="page"] { color: #fff; border-color: var(--gold); }
 .menu__panel a[aria-current="page"] { color: var(--gold-hi); }

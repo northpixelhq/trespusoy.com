@@ -21,6 +21,16 @@ import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://trespusoy.com"
+# The only other sites a page may link to. A link anywhere else is a problem.
+OUTSIDE = {
+    "https://play.google.com/store/apps/details?id=dev.tres.app",
+    "https://apps.apple.com/app/id6815482151",
+    "https://northpixelhq.github.io/pusoy/privacy-policy",
+    "https://northpixelhq.github.io/pusoy/online-terms",
+    "https://northpixelhq.github.io/pusoy/delete-online-profile",
+    "https://www.facebook.com/trespusoydos",
+    "https://www.instagram.com/trespusoydos/",
+}
 LOADS = {("link", "href"), ("script", "src"), ("img", "src"), ("source", "src"),
          ("video", "poster"), ("use", "href")}
 
@@ -134,10 +144,12 @@ def main() -> int:
     for coded in ("02-same-room-gameplay", "04-join-by-room-code", "08-find-nearby-room"):
         for found in ROOT.rglob(f"{coded}*"):
             problems.append(f"{found.relative_to(ROOT)}: this store screenshot shows a room code")
+    for url in sorted(outside - OUTSIDE):
+        problems.append(f"links to an unlisted outside address: {url}")
+    for url in sorted(outside & OUTSIDE):
+        print("outside link (check by hand):", url)
     for p in problems:
         print("PROBLEM", p)
-    for url in sorted(outside):
-        print("outside link (check by hand):", url)
     print(f"{len(pages)} pages, {len(problems)} problems")
     return 1 if problems else 0
 
