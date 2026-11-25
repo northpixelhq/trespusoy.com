@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-1wtZ1gLC0241tbUYJvuuKVqgTIToWFsEZXTYoa7Qkc4='; style-src 'self'; img-src 'self'; font-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-1wtZ1gLC0241tbUYJvuuKVqgTIToWFsEZXTYoa7Qkc4='; style-src 'self' 'sha256-1gf9vQrCvRUTs9OhihuYh4QlAs3wFLtXCTYEswa5t+U='; img-src 'self'; font-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Tres – Pusoy Dos: free Pusoy Dos for Android, iPhone and iPad</title>
 <meta name="description" content="Pusoy Dos, the Filipino card classic also known as Big Two: play solo against three AI opponents, with friends on the same Wi-Fi, or online in a private room. Free.">
 <link rel="canonical" href="https://trespusoy.com/">
@@ -112,6 +112,8 @@
   <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></symbol>
   <!-- Facebook's "f" mark and Instagram's glyph, trademarks of Meta Platforms, Inc., drawn in their standard shapes to link to the game's own pages. -->
   <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
   <symbol id="i-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 1h10a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H7a6 6 0 0 1-6-6V7a6 6 0 0 1 6-6Zm0 2.1A3.9 3.9 0 0 0 3.1 7v10A3.9 3.9 0 0 0 7 20.9h10a3.9 3.9 0 0 0 3.9-3.9V7A3.9 3.9 0 0 0 17 3.1Z"/><path fill-rule="evenodd" d="M12 6.4a5.6 5.6 0 1 1 0 11.2 5.6 5.6 0 0 1 0-11.2Zm0 2.1a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><circle cx="17.85" cy="6.15" r="1.35"/></symbol>
@@ -387,37 +389,237 @@
   </section>
 
   <!-- 5 · Themes -->
-  <section class="section rule-top" id="themes" aria-labelledby="themes-title">
+  <section class="section rule-top showcase" id="themes" aria-labelledby="themes-title">
     <div class="wrap">
       <div class="section__head">
         <p class="eyebrow" data-reveal>Themes and card decks</p>
         <h2 class="h2" id="themes-title" data-reveal>Make the table yours.</h2>
-        <p class="lead" data-reveal>Unlock complete table themes with Cosmetic Tokens earned by playing and collecting Milestones, or buy a theme or token bundle in the optional Shop.</p>
+        <p class="lead" data-reveal>Every Theme Pack changes the whole table: the felt, cards, light, celebration and sound. First Light is the free default. Unlock the others with Cosmetic Tokens earned by playing and collecting Milestones, or buy a theme or token bundle in the optional Shop.</p>
       </div>
 
-      <div class="themes" data-reveal>
-        <figure class="theme"><img src="/assets/img/themes/first-light.webp" width="480" height="815" loading="lazy" decoding="async" alt="The First Light table: green felt, cream cards, a gold turn light. The hand holds the 3 of clubs, and the table says the first play must include it."></figure>
-        <figure class="theme"><img src="/assets/img/themes/perlas.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Perlas table: deep teal felt with a sea-glass turn light."></figure>
-        <figure class="theme"><img src="/assets/img/themes/violet-hour.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Violet Hour table: violet felt, with court cards drawn as figures in a spotlight."></figure>
-        <figure class="theme"><img src="/assets/img/themes/manila-bay.webp" width="480" height="815" loading="lazy" decoding="async" alt="The Manila Bay table: warm sunset felt, with court cards showing a boat on the bay at sundown."></figure>
-      </div>
-      <p class="themes__hint" aria-hidden="true">Swipe for more tables</p>
-
-      <div class="decks">
-        <figure class="courts" data-reveal aria-label="Court cards from five Theme Packs: First Light, Violet Hour, Manila Bay, Evergrove and Neon Coast">
-          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">K<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/first-light-king-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="First Light's king"></span></div></div></div>
-          <div class="slot"><div class="card"><div class="card__face is-black"><span class="idx">K<svg class="suit"><use href="#s-s"/></svg></span><span class="court-art"><img src="/assets/img/courts/violet-hour-king-black.webp" width="157" height="300" loading="lazy" decoding="async" alt="Violet Hour's king, a figure in a spotlight"></span></div></div></div>
-          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">Q<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/manila-bay-queen-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Manila Bay's queen, a boat on the bay at sundown"></span></div></div></div>
-          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">K<svg class="suit"><use href="#s-d"/></svg></span><span class="court-art"><img src="/assets/img/courts/evergrove-king-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Evergrove's king, in an arch of gold leaf"></span></div></div></div>
-          <div class="slot"><div class="card"><div class="card__face is-red"><span class="idx">Q<svg class="suit"><use href="#s-h"/></svg></span><span class="court-art"><img src="/assets/img/courts/neon-coast-queen-red.webp" width="157" height="300" loading="lazy" decoding="async" alt="Neon Coast's queen, drawn in glowing neon tube"></span></div></div></div>
-        </figure>
-        <div class="decks__copy">
-          <h3 class="h3" data-reveal>Eight Theme Packs, and Card Decks to wear with them</h3>
-          <p data-reveal>First Light is the free default. Perlas, Violet Hour, Manila Bay, Pixel, Piso Arcade, Evergrove and Neon Coast are Theme Packs to unlock with tokens or buy. Heirloom, Afterglow, Deco Sunburst and Crown Jewels are Card Decks to unlock or buy and wear with any theme; the Champion's Deck is never sold — you win it on the Tour.</p>
-          <p class="mute" data-reveal>Every purchase is cosmetic only: it changes how the table looks and sounds, never the cards, rules, or opponent strength.</p>
+      <article class="spotlight" aria-labelledby="spotlight-name">
+        <div class="spotlight__head">
+          <p class="eyebrow spotlight__eyebrow" data-reveal>Theme Pack</p>
+          <h3 class="spotlight__name" id="spotlight-name" data-reveal>Neon Coast</h3>
+          <p class="spotlight__line" data-reveal>A coast road just after sunset — a pink sky, wet neon, and one aqua light for your turn.</p>
         </div>
+        <div class="spotlight__media" data-reveal="deal">
+          <div class="phone phone--neon">
+            <div class="phone__screen phone__screen--theme">
+              <img class="phone__still" src="/assets/video/neon-coast-poster.webp" width="540" height="886" loading="lazy" decoding="async" alt="">
+              <video class="theme-video" width="540" height="886" muted playsinline loop controls preload="none"
+                data-poster="/assets/video/neon-coast-poster.webp"
+                aria-label="Real play on the Neon Coast table: a deal, then the last card played and the 1st-place medal">
+                <source src="/assets/video/neon-coast.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="see__bar theme-bar">
+            <button class="see__toggle theme-toggle" type="button" data-state="playing">
+              <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+              <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+              <span class="see__toggle-text">Pause</span><span class="sr-only"> the Neon Coast video</span>
+            </button>
+          </div>
+          <p class="see__caption">Real play on Neon Coast, recorded from Tres 2.5.0.</p>
+          <noscript>
+            <style>.theme-video { visibility: hidden; }</style>
+            <p class="see__caption"><a href="/assets/video/neon-coast.mp4">Watch it (MP4, 8 seconds)</a></p>
+          </noscript>
+        </div>
+        <div class="spotlight__copy">
+          <p class="spotlight__text" data-reveal>Its court cards are drawn as neon signs, and like every Theme Pack it brings its own celebration and sound.</p>
+          <div class="spotlight__shots" data-reveal>
+            <a class="shot" href="/assets/img/themes/neon-coast-bigplay-1080.webp" data-viewer="7" data-start="bigplay">
+              <img src="/assets/img/themes/neon-coast-bigplay-360.webp" width="360" height="591" loading="lazy" decoding="async" alt="A straight, 5 to 9, lands on the Neon Coast table under its STRAIGHT banner.">
+              <span>A big play</span>
+            </a>
+            <figure class="shot">
+              <img src="/assets/img/themes/neon-coast-win-360.webp" width="360" height="591" loading="lazy" decoding="async" alt="The Neon Coast result screen: “You win!”, 1st place, the winning 8 of clubs, and a REMATCH button in aqua.">
+              <figcaption>The win</figcaption>
+            </figure>
+          </div>
+          <a class="more-link" href="#theme-gallery" data-reveal><span>See all eight tables</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <div class="gallery" id="theme-gallery">
+        <div class="gallery__head">
+          <h3 class="h3" id="gallery-title" data-reveal>All eight Theme Packs</h3>
+          <p class="gallery__hint" data-reveal>Tap a table to look closer.</p>
+        </div>
+        <ul class="gallery__list" aria-labelledby="gallery-title" data-reveal>
+          <li class="tile tile--first-light">
+            <a class="tile__link" href="/assets/img/themes/first-light-1080.webp" data-viewer="0"
+              data-name="First Light" data-line="The table Tres opens on — deep green, one warm light overhead."
+              data-table="/assets/img/themes/first-light-1080.webp" data-table-alt="The First Light table: deep green felt under one warm light, a hand of thirteen dealt, and the line “The first play must include the 3♣.”"
+              data-bigplay="/assets/img/themes/first-light-bigplay-1080.webp" data-bigplay-alt="A full house of three 3s and two aces lands on the First Light table under its FULL HOUSE banner." data-bigplay-caption="An opening full house">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/first-light-540.webp" srcset="/assets/img/themes/first-light-360.webp 360w, /assets/img/themes/first-light-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The First Light table: deep green felt under one warm light, a hand of thirteen dealt, and the line “The first play must include the 3♣.”">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">First Light<span class="tile__tag">Free default</span></span>
+            </a>
+            <p class="tile__line">The table Tres opens on — deep green, one warm light overhead.</p>
+          </li>
+          <li class="tile tile--perlas">
+            <a class="tile__link" href="/assets/img/themes/perlas-1080.webp" data-viewer="1"
+              data-name="Perlas" data-line="Cool, low-glare dark for late-night games — one calm light shows whose turn it is."
+              data-table="/assets/img/themes/perlas-1080.webp" data-table-alt="The Perlas table: cool, dark teal with a calm sea-glass light, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/perlas-bigplay-1080.webp" data-bigplay-alt="A full house of three 9s and two 3s lands on the Perlas table under its FULL HOUSE banner." data-bigplay-caption="An opening full house">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/perlas-540.webp" srcset="/assets/img/themes/perlas-360.webp 360w, /assets/img/themes/perlas-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Perlas table: cool, dark teal with a calm sea-glass light, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Perlas</span>
+            </a>
+            <p class="tile__line">Cool, low-glare dark for late-night games — one calm light shows whose turn it is.</p>
+          </li>
+          <li class="tile tile--violet-hour">
+            <a class="tile__link" href="/assets/img/themes/violet-hour-1080.webp" data-viewer="2"
+              data-name="Violet Hour" data-line="The house lights drop and the whole room turns violet — your turn is the light nearest you."
+              data-table="/assets/img/themes/violet-hour-1080.webp" data-table-alt="The Violet Hour table: a violet stage, its court cards drawn as figures under spotlights, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/violet-hour-bigplay-1080.webp" data-bigplay-alt="A full house of three spotlit jacks and two 5s lands on the Violet Hour table under its FULL HOUSE banner." data-bigplay-caption="A full house of spotlit jacks">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/violet-hour-540.webp" srcset="/assets/img/themes/violet-hour-360.webp 360w, /assets/img/themes/violet-hour-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Violet Hour table: a violet stage, its court cards drawn as figures under spotlights, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Violet Hour</span>
+            </a>
+            <p class="tile__line">The house lights drop and the whole room turns violet — your turn is the light nearest you.</p>
+          </li>
+          <li class="tile tile--manila-bay">
+            <a class="tile__link" href="/assets/img/themes/manila-bay-1080.webp" data-viewer="3"
+              data-name="Manila Bay" data-line="The ten minutes after the sun goes down over the bay — warm, and getting cooler."
+              data-table="/assets/img/themes/manila-bay-1080.webp" data-table-alt="The Manila Bay table: warm sunset colours, its court cards showing a boat on the bay at sundown, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/manila-bay-bigplay-1080.webp" data-bigplay-alt="A full house of three 10s and two 2s lands over a flush on the Manila Bay table under its FULL HOUSE banner." data-bigplay-caption="A full house over a flush">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/manila-bay-540.webp" srcset="/assets/img/themes/manila-bay-360.webp 360w, /assets/img/themes/manila-bay-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Manila Bay table: warm sunset colours, its court cards showing a boat on the bay at sundown, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Manila Bay</span>
+            </a>
+            <p class="tile__line">The ten minutes after the sun goes down over the bay — warm, and getting cooler.</p>
+          </li>
+          <li class="tile tile--pixel">
+            <a class="tile__link" href="/assets/img/themes/pixel-1080.webp" data-viewer="4"
+              data-name="Pixel" data-line="Every dot drawn on purpose — cards, buttons and all."
+              data-table="/assets/img/themes/pixel-1080.webp" data-table-alt="The Pixel table: the cards, buttons and lettering all drawn in pixels, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/pixel-bigplay-1080.webp" data-bigplay-alt="A full house of three 4s and two 5s lands on the Pixel table under its FULL HOUSE banner." data-bigplay-caption="A full house in pixels">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/pixel-540.webp" srcset="/assets/img/themes/pixel-360.webp 360w, /assets/img/themes/pixel-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Pixel table: the cards, buttons and lettering all drawn in pixels, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Pixel</span>
+            </a>
+            <p class="tile__line">Every dot drawn on purpose — cards, buttons and all.</p>
+          </li>
+          <li class="tile tile--piso-arcade">
+            <a class="tile__link" href="/assets/img/themes/piso-arcade-1080.webp" data-viewer="5"
+              data-name="Piso Arcade" data-line="The mall arcade at closing time — scanlines, phosphor, and one hot pink light for your turn."
+              data-table="/assets/img/themes/piso-arcade-1080.webp" data-table-alt="The Piso Arcade table: arcade colours and scanlines, its court cards drawn as pixel figures, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/piso-arcade-bigplay-1080.webp" data-bigplay-alt="An AI opponent&#x27;s straight flush, 3 to 7 of spades, lands on the Piso Arcade table under its STRAIGHT FLUSH banner." data-bigplay-caption="A straight flush">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/piso-arcade-540.webp" srcset="/assets/img/themes/piso-arcade-360.webp 360w, /assets/img/themes/piso-arcade-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Piso Arcade table: arcade colours and scanlines, its court cards drawn as pixel figures, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Piso Arcade</span>
+            </a>
+            <p class="tile__line">The mall arcade at closing time — scanlines, phosphor, and one hot pink light for your turn.</p>
+          </li>
+          <li class="tile tile--evergrove">
+            <a class="tile__link" href="/assets/img/themes/evergrove-1080.webp" data-viewer="6"
+              data-name="Evergrove" data-line="Black and antique gold, the last sun through an old wood — and a sage light for your turn."
+              data-table="/assets/img/themes/evergrove-1080.webp" data-table-alt="The Evergrove table: black and antique gold with rays of late sun, its court cards framed in arches of gold leaf, a hand of thirteen dealt."
+              data-bigplay="/assets/img/themes/evergrove-bigplay-1080.webp" data-bigplay-alt="An AI opponent&#x27;s flush lands on the Evergrove table under its FLUSH banner." data-bigplay-caption="A flush">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/evergrove-540.webp" srcset="/assets/img/themes/evergrove-360.webp 360w, /assets/img/themes/evergrove-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Evergrove table: black and antique gold with rays of late sun, its court cards framed in arches of gold leaf, a hand of thirteen dealt.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Evergrove</span>
+            </a>
+            <p class="tile__line">Black and antique gold, the last sun through an old wood — and a sage light for your turn.</p>
+          </li>
+          <li class="tile tile--neon-coast">
+            <a class="tile__link" href="/assets/img/themes/neon-coast-1080.webp" data-viewer="7"
+              data-name="Neon Coast" data-line="A coast road just after sunset — a pink sky, wet neon, and one aqua light for your turn."
+              data-table="/assets/img/themes/neon-coast-1080.webp" data-table-alt="The Neon Coast table: a pink sky over dark water, its court cards drawn as glowing neon signs, a hand of thirteen dealt and an aqua turn light."
+              data-bigplay="/assets/img/themes/neon-coast-bigplay-1080.webp" data-bigplay-alt="A straight, 5 to 9, lands on the Neon Coast table under its STRAIGHT banner." data-bigplay-caption="A straight">
+              <span class="tile__frame">
+                <img src="/assets/img/themes/neon-coast-540.webp" srcset="/assets/img/themes/neon-coast-360.webp 360w, /assets/img/themes/neon-coast-540.webp 540w"
+                  sizes="(min-width: 1200px) 270px, (min-width: 760px) 22vw, 64vw" width="540" height="886" loading="lazy" decoding="async" alt="The Neon Coast table: a pink sky over dark water, its court cards drawn as glowing neon signs, a hand of thirteen dealt and an aqua turn light.">
+                <svg class="tile__zoom" aria-hidden="true"><use href="#i-zoom"/></svg>
+              </span>
+              <span class="tile__name">Neon Coast</span>
+            </a>
+            <p class="tile__line">A coast road just after sunset — a pink sky, wet neon, and one aqua light for your turn.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="decks2">
+        <div class="decks2__head">
+          <h3 class="h3" id="decks-title" data-reveal>Card Decks, to wear with any theme</h3>
+          <p data-reveal>Card decks change the cards themselves, over any theme. Here each one is shown on Neon Coast, as the game’s Collection previews it.</p>
+        </div>
+        <ul class="deck-list" aria-labelledby="decks-title" data-reveal>
+          <li class="deck deck--prize">
+            <img src="/assets/img/decks/champions-deck-640.webp" width="640" height="335" loading="lazy" decoding="async" alt="The Champion’s Deck fanned on Neon Coast: cream cards with gold-edged courts in red and black, and a black card back with a gold wreath.">
+            <b>Champion’s Deck</b>
+            <span>Never sold: win the Tour’s Final Table to earn it.</span>
+          </li>
+          <li class="deck">
+            <img src="/assets/img/decks/heirloom-640.webp" width="640" height="335" loading="lazy" decoding="async" alt="The Heirloom deck fanned on Neon Coast: parchment cards with sage and gold courts, and a black back bearing a shield and sword.">
+            <b>Heirloom</b>
+            <span>Parchment, antique gold and sage on black — a kingdom’s heirloom, dealt to you.</span>
+          </li>
+          <li class="deck">
+            <img src="/assets/img/decks/afterglow-640.webp" width="640" height="335" loading="lazy" decoding="async" alt="The Afterglow deck fanned on Neon Coast: pearl-white cards with pink and teal neon edges, and courts in black evening dress.">
+            <b>Afterglow</b>
+            <span>A night-out deck — pearl and lacquer, pink and teal neon, and courts in evening dress.</span>
+          </li>
+          <li class="deck">
+            <img src="/assets/img/decks/deco-sunburst-640.webp" width="640" height="335" loading="lazy" decoding="async" alt="The Deco Sunburst deck fanned on Neon Coast: cream cards with stepped art deco frames and a sunburst back.">
+            <b>Deco Sunburst</b>
+            <span>Art deco in your table’s own metal — a sunrise, stepped frames and ziggurat crowns.</span>
+          </li>
+          <li class="deck">
+            <img src="/assets/img/decks/crown-jewels-640.webp" width="640" height="335" loading="lazy" decoding="async" alt="The Crown Jewels deck fanned on Neon Coast: black cards set in gold, with crowned courts.">
+            <b>Crown Jewels</b>
+            <span>Black lacquer in a gold setting — every suit cut like a stone.</span>
+          </li>
+        </ul>
+        <p class="mute decks2__note" data-reveal>Heirloom, Afterglow, Deco Sunburst and Crown Jewels can be unlocked with tokens or bought. Every purchase is cosmetic only: it changes how the table looks and sounds, never the cards, rules, or opponent strength.</p>
       </div>
     </div>
+
+    <dialog class="viewer" aria-labelledby="viewer-name">
+      <div class="viewer__inner">
+        <figure class="viewer__figure"></figure>
+        <div class="viewer__side">
+          <p class="eyebrow viewer__count" aria-live="polite"></p>
+          <h3 class="viewer__name" id="viewer-name"></h3>
+          <p class="viewer__line"></p>
+          <div class="viewer__views" role="group" aria-label="Show">
+            <button class="viewer__view" type="button" data-view="table" aria-pressed="true">The table</button>
+            <button class="viewer__view" type="button" data-view="bigplay" aria-pressed="false">A big play</button>
+          </div>
+          <p class="viewer__caption"></p>
+          <div class="viewer__nav">
+            <button class="viewer__step" type="button" data-step="-1"><svg aria-hidden="true"><use href="#i-arrow"/></svg><span>Previous</span></button>
+            <button class="viewer__step" type="button" data-step="1"><span>Next</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <button class="viewer__close" type="button" aria-label="Close"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+    </dialog>
   </section>
 
   <!-- 6 · More at the table -->

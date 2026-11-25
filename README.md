@@ -30,6 +30,7 @@ gameplay recordings; nothing is downloaded.
     uv run tools/build_fonts.py --game-repo ../tres --ref origin/main
     uv run tools/build_images.py --game-repo ../tres --ref origin/main
     tools/build_video.sh ~/Movies/tres-reels-footage/2.5.0-58
+    uv run tools/build_themes.py ~/Movies/tres-reels-footage/2.5.0-58/themes
     tools/build_share.sh http://127.0.0.1:8765     # with the server running
 
 ## Shared parts

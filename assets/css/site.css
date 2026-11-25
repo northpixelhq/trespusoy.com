@@ -636,7 +636,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 }
 .phone__screen video { width: 100%; height: 100%; object-fit: cover; }
 .see__bar { display: none; align-items: center; gap: 12px; max-width: 340px; min-height: 44px; margin: 18px auto 0; }
-.has-autoplay .see__bar { display: flex; }
+.is-autoplay .see__bar { display: flex; }
 .see__toggle {
   flex: none;
   display: inline-flex; align-items: center; gap: 8px;
@@ -906,53 +906,186 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 @media (min-width: 1280px) { .ranks { --mw: 62px; --step: calc(var(--mw) * 0.6); } }
 
 /* ---------- Make the table yours ----------------------------------- */
+/* A spotlight on Neon Coast (a real loop), all eight Theme Packs as dealt
+   tables a visitor can open large, then the Card Decks as the game's
+   Collection previews them. */
 
-.themes {
-  display: grid; grid-auto-flow: column; grid-auto-columns: 62%;
-  gap: 14px;
-  margin: 0 calc(var(--gutter) * -1);
-  padding: 6px var(--gutter) 22px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 var(--gutter);
+.showcase { overflow: hidden; }
+.showcase::before {
+  /* a neon dusk behind the spotlight, Neon Coast's own pink and aqua */
+  content: ""; position: absolute; z-index: -1; left: 50%; top: 220px;
+  width: 1100px; height: 900px; transform: translateX(-50%);
+  background:
+    radial-gradient(closest-side at 38% 46%, rgba(225, 70, 170, 0.20), transparent 70%),
+    radial-gradient(closest-side at 64% 58%, rgba(60, 220, 230, 0.12), transparent 72%);
+  pointer-events: none;
+}
+
+.spotlight { display: grid; gap: 26px; margin: 8px 0 72px; grid-template-areas: "head" "media" "copy"; }
+.spotlight__head { grid-area: head; }
+.spotlight__media { grid-area: media; }
+.spotlight__copy { grid-area: copy; }
+.phone--neon {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 50px 90px -30px rgba(0, 0, 0, 0.9),
+    0 0 110px -10px rgba(225, 70, 170, 0.35),
+    0 0 60px -20px rgba(60, 220, 230, 0.35);
+}
+.phone__screen--theme { aspect-ratio: 540 / 886; background: #0D2234; }
+.phone__screen--theme video { position: relative; width: 100%; height: 100%; object-fit: cover; }
+/* The still behind the video: what a visitor sees before it plays, or
+   without it. It loads lazily, unlike a poster, which loads at once. */
+.phone__still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.theme-bar { justify-content: center; }
+.spotlight__eyebrow { color: #7FE7EE; margin-bottom: 6px; }
+.spotlight__name {
+  font-family: var(--font-serif); font-size: clamp(44px, 12vw, 84px); line-height: 1; letter-spacing: -0.01em;
+  color: #FFE9F6;
+  text-shadow: 0 0 18px rgba(255, 110, 200, 0.55), 0 0 42px rgba(225, 70, 170, 0.35);
+}
+.spotlight__line { margin: 16px 0 10px; font-size: 19px; line-height: 1.45; color: #F4EAD5; text-wrap: pretty; }
+.spotlight__text { color: var(--text-soft); }
+.spotlight__shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 360px; margin: 8px 0 6px; }
+.shot { margin: 0; display: grid; gap: 8px; color: var(--text-soft); text-decoration: none; font-size: 13.5px; }
+.shot img {
+  width: 100%; height: auto; border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(236, 224, 200, 0.14), 0 18px 30px -18px rgba(0, 0, 0, 0.9);
+  transition: transform 300ms var(--settle), box-shadow 300ms var(--settle);
+}
+a.shot:hover { color: #fff; }
+a.shot:hover img { transform: translateY(-4px); box-shadow: 0 0 0 1px rgba(127, 231, 238, 0.6), 0 22px 36px -18px rgba(0, 0, 0, 0.9); }
+@media (min-width: 960px) {
+  .spotlight {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    grid-template-areas: "media head" "media copy"; grid-template-rows: auto 1fr;
+    column-gap: 80px; row-gap: 0; margin: 24px 0 120px;
+  }
+  .spotlight__head { align-self: end; padding-top: 40px; }
+  .spotlight .phone { width: 330px; }
+}
+
+.gallery__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 20px; margin-bottom: 18px; }
+.gallery__hint { margin: 0; font-size: 14px; color: var(--text-mute); }
+.gallery__list {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 64%;
+  gap: 14px; margin: 0 calc(var(--gutter) * -1); padding: 6px var(--gutter) 18px;
+  list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter);
   scrollbar-width: none;
 }
-.themes::-webkit-scrollbar { display: none; }
-.theme { margin: 0; scroll-snap-align: start; }
-.theme img {
-  width: 100%; height: auto; aspect-ratio: 480 / 815;
-  border-radius: 20px;
-  background: var(--felt-low);
+.gallery__list::-webkit-scrollbar { display: none; }
+.tile { scroll-snap-align: start; min-width: 0; }
+.tile__link { display: grid; gap: 10px; color: var(--text); text-decoration: none; border-radius: 22px; }
+.tile__frame { position: relative; display: block; border-radius: 20px; }
+.tile__frame img {
+  display: block; width: 100%; height: auto; aspect-ratio: 540 / 886;
+  border-radius: 20px; background: var(--felt-low);
   box-shadow: 0 0 0 1px rgba(236, 224, 200, 0.14), 0 30px 50px -28px rgba(0, 0, 0, 0.95);
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px));
+  transition: transform 500ms var(--settle), box-shadow 300ms var(--settle);
 }
-.themes__hint { margin: 0; font-size: 13px; color: var(--text-mute); text-align: center; }
+.tile__zoom {
+  position: absolute; right: 10px; top: 10px; width: 34px; height: 34px; padding: 8px;
+  border-radius: 50%; background: rgba(6, 22, 14, 0.72); color: #fff;
+  box-shadow: 0 0 0 1px rgba(236, 224, 200, 0.25);
+}
+.tile__name { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; font-weight: 700; font-size: 17px; color: #F4EAD5; }
+.tile__tag { font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.tile__line { margin: 4px 0 0; font-size: 14px; line-height: 1.45; color: var(--text-mute); }
+.tile__link:hover .tile__frame img, .tile.is-pointed .tile__frame img { --lift: -8px; box-shadow: 0 0 0 1px rgba(234, 185, 97, 0.55), 0 36px 56px -28px rgba(0, 0, 0, 0.95); }
+.tile.is-pointed .tile__frame img { transition-duration: 140ms; }
+.tile--neon-coast .tile__frame img { box-shadow: 0 0 0 1px rgba(127, 231, 238, 0.45), 0 0 40px -12px rgba(225, 70, 170, 0.6), 0 30px 50px -28px rgba(0, 0, 0, 0.95); }
 @media (min-width: 760px) {
-  .themes { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-columns: auto; margin: 0; padding: 6px 0 22px; overflow: visible; gap: 18px; }
-  .themes__hint { display: none; }
-  .theme:nth-child(even) { transform: translateY(36px); }
+  .gallery__list { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-columns: auto; margin: 0; padding: 6px 0 0; overflow: visible; gap: 34px 20px; }
 }
 
-.decks { display: grid; gap: 36px; margin-top: 56px; align-items: center; }
-.courts { position: relative; height: 184px; margin: 0; --cw: 84px; }
-.courts .slot { left: 50%; top: 100%; }
-.courts .slot:nth-child(1) { transform: translate(calc(var(--cw) * -1.1), calc(var(--cw) * 0.16)) rotate(-20deg); }
-.courts .slot:nth-child(2) { transform: translate(calc(var(--cw) * -0.56), calc(var(--cw) * 0.03)) rotate(-10deg); }
-.courts .slot:nth-child(3) { transform: translate(0, 0) rotate(0deg); }
-.courts .slot:nth-child(4) { transform: translate(calc(var(--cw) * 0.56), calc(var(--cw) * 0.03)) rotate(10deg); }
-.courts .slot:nth-child(5) { transform: translate(calc(var(--cw) * 1.1), calc(var(--cw) * 0.16)) rotate(20deg); }
-.court-art { position: absolute; left: 22%; right: 10%; top: 11%; bottom: 8%; display: grid; place-items: center; }
-.court-art img { max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; }
-.courts .idx { font-size: calc(var(--cw) * 0.2); left: 7%; top: 5%; }
-.courts .idx .suit { width: calc(var(--cw) * 0.12); height: calc(var(--cw) * 0.12); }
-.decks__copy p { color: var(--text-soft); }
-.decks__copy .h3 { margin-bottom: 12px; }
-@media (min-width: 600px) { .courts { height: 270px; --cw: 130px; } }
-@media (min-width: 960px) {
-  .decks { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 72px; margin-top: 112px; }
-  .courts { height: 320px; --cw: 164px; }
-  .courts .slot { transition: transform 360ms var(--settle); }
-  .courts .slot:hover { z-index: 9; }
+.decks2 { margin-top: 88px; }
+.decks2__head { max-width: 640px; margin-bottom: 20px; }
+.decks2__head p { color: var(--text-soft); margin: 10px 0 0; }
+.deck-list {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 78%;
+  gap: 14px; margin: 0 calc(var(--gutter) * -1); padding: 6px var(--gutter) 18px;
+  list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter); scrollbar-width: none;
 }
+.deck-list::-webkit-scrollbar { display: none; }
+.deck { display: grid; gap: 6px; align-content: start; scroll-snap-align: start; min-width: 0; }
+.deck img {
+  width: 100%; height: auto; aspect-ratio: 640 / 335; border-radius: 16px; margin-bottom: 6px;
+  box-shadow: 0 0 0 1px rgba(236, 224, 200, 0.14), 0 24px 40px -24px rgba(0, 0, 0, 0.95);
+}
+.deck b { color: #F4EAD5; font-size: 16px; }
+.deck span { font-size: 14px; line-height: 1.45; color: var(--text-mute); }
+.deck--prize img { box-shadow: 0 0 0 1.5px var(--gold), 0 24px 40px -24px rgba(234, 185, 97, 0.5); }
+.deck--prize b { color: var(--gold-hi); }
+.decks2__note { margin: 18px 0 0; font-size: 15px; max-width: 720px; }
+@media (min-width: 760px) {
+  .deck-list { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-columns: auto; margin: 0; padding: 6px 0 0; overflow: visible; gap: 28px 20px; }
+}
+@media (min-width: 1100px) {
+  .deck-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .decks2 { margin-top: 120px; }
+}
+
+/* The large view: a dialog the script opens; without the script each
+   table's link opens its large picture directly. */
+.viewer {
+  width: 100%; max-width: 100%; height: 100%; max-height: 100%; margin: 0; padding: 0;
+  border: 0; background: rgba(2, 10, 6, 0.96); color: var(--text);
+}
+.viewer::backdrop { background: rgba(1, 8, 4, 0.82); }
+.viewer__inner {
+  position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto;
+  height: 100%; max-width: 1180px; margin: 0 auto; padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  gap: 14px;
+}
+.viewer__figure { margin: 0; min-height: 0; display: grid; place-items: center; }
+.viewer__img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;
+  border-radius: 18px; box-shadow: 0 0 0 1px rgba(236, 224, 200, 0.16), 0 40px 80px -30px rgba(0, 0, 0, 0.95);
+}
+.viewer__side { display: grid; gap: 8px; align-content: start; }
+.viewer__count { margin: 0; }
+.viewer__name { font-family: var(--font-serif); font-size: 30px; line-height: 1.05; color: #F7EEDB; }
+.viewer__line { margin: 0; font-size: 15px; color: var(--text-soft); }
+.viewer__views { display: flex; gap: 8px; margin-top: 4px; }
+.viewer__view, .viewer__step {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px;
+  border-radius: 999px; border: 1px solid var(--line-strong); background: transparent;
+  color: var(--text); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.viewer__view[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.viewer__caption { margin: 0; min-height: 1.4em; font-size: 14px; color: var(--text-mute); }
+.viewer__nav { display: flex; justify-content: space-between; gap: 8px; }
+.viewer__step svg { width: 16px; height: 16px; }
+.viewer__step[data-step="-1"] svg { transform: rotate(180deg); }
+.viewer__close {
+  position: absolute; right: 12px; top: 12px; display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong);
+  background: rgba(6, 22, 14, 0.85); color: #fff; cursor: pointer;
+}
+.viewer__close svg { width: 20px; height: 20px; }
+@media (max-width: 759px) {
+  /* the picture above, the panel (about 230 px) below, both on one screen */
+  .viewer__img { max-height: calc(100vh - 262px); max-height: calc(100dvh - 262px); }
+}
+@media (min-width: 600px) and (max-width: 759px) {
+  .viewer__img { max-height: calc(100vh - 320px); max-height: calc(100dvh - 320px); }
+}
+@media (max-width: 599px) {
+  .viewer__line { display: none; }
+  .viewer__name { font-size: 24px; }
+}
+@media (min-width: 760px) {
+  .viewer__inner { grid-template-rows: 100%; grid-template-columns: minmax(0, 1fr) 320px; align-items: center; padding: 32px 40px; gap: 40px; }
+  .viewer__figure { height: 100%; }
+  .viewer__img { max-height: calc(100vh - 64px); max-height: calc(100dvh - 64px); }
+  .viewer__name { font-size: 44px; }
+  .viewer__side { gap: 12px; }
+}
+.viewer-open { overflow: hidden; }
+.viewer:not([open]) { display: none; }
 
 /* ---------- More at the table -------------------------------------- */
 
@@ -1318,8 +1451,6 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 /* Containers whose children carry the movement show at once themselves. */
 .reveal-ready .ranks[data-reveal].is-in,
-.reveal-ready .courts[data-reveal].is-in,
-.reveal-ready .themes[data-reveal].is-in,
 .reveal-ready .features[data-reveal].is-in,
 .reveal-ready .hands[data-reveal].is-in,
 .reveal-ready .final__mark[data-reveal].is-in,
@@ -1353,28 +1484,23 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .suits li:nth-child(7) { --s: 6; }
 .reveal-ready .suits[data-reveal].is-in li { animation: rise-in 520ms var(--spring) both; animation-delay: calc(var(--s) * 70ms + 200ms); }
 
-/* The court cards spread from a stack; on a desktop a card lifts to the pointer. */
-.reveal-ready .courts[data-reveal].is-in .slot { animation: spread 1000ms var(--spring) both; }
-.reveal-ready .courts[data-reveal].is-in .slot:nth-child(1) { animation-delay: 60ms; }
-.reveal-ready .courts[data-reveal].is-in .slot:nth-child(2) { animation-delay: 120ms; }
-.reveal-ready .courts[data-reveal].is-in .slot:nth-child(4) { animation-delay: 120ms; }
-.reveal-ready .courts[data-reveal].is-in .slot:nth-child(5) { animation-delay: 60ms; }
-@keyframes spread { from { transform: translate(0, 30px) rotate(0deg); } }
-@media (hover: hover) and (pointer: fine) {
-  .courts .card { transition: transform 360ms var(--spring); }
-  .courts .slot:hover .card { transform: translateY(-18px); }
+/* The eight tables are dealt in from the left, one after another; on a
+   desktop each tilts toward the pointer (the script sets --rx and --ry).
+   The decks fan up after them. */
+.tile:nth-child(1) { --n: 0; } .tile:nth-child(2) { --n: 1; } .tile:nth-child(3) { --n: 2; } .tile:nth-child(4) { --n: 3; }
+.tile:nth-child(5) { --n: 4; } .tile:nth-child(6) { --n: 5; } .tile:nth-child(7) { --n: 6; } .tile:nth-child(8) { --n: 7; }
+.reveal-ready .gallery__list[data-reveal].is-in,
+.reveal-ready .deck-list[data-reveal].is-in,
+.reveal-ready .spotlight__shots[data-reveal].is-in { animation: none; }
+.reveal-ready .gallery__list[data-reveal].is-in .tile {
+  animation: deal-tile 760ms var(--throw) both;
+  animation-delay: calc(var(--n) * 80ms + 60ms);
 }
-
-/* The theme tables are dealt from a stack, one after another; on a desktop
-   each tilts toward the pointer (the script sets --rx and --ry). */
-.theme:nth-child(1) { --n: 0; } .theme:nth-child(2) { --n: 1; } .theme:nth-child(3) { --n: 2; } .theme:nth-child(4) { --n: 3; }
-.reveal-ready .themes[data-reveal].is-in .theme {
-  animation: deal-tile 820ms var(--throw) both;
-  animation-delay: calc(var(--n) * 120ms + 60ms);
-}
-@keyframes deal-tile { from { opacity: 0; transform: translateX(calc(var(--n) * -100%)) translateY(40px) rotate(-7deg); } }
-.theme img { transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px)); transition: transform 500ms var(--settle); }
-.theme.is-pointed img { --lift: -8px; transition-duration: 140ms; }
+@keyframes deal-tile { from { opacity: 0; transform: translate(-60px, 40px) rotate(-7deg); } }
+.deck:nth-child(1) { --n: 0; } .deck:nth-child(2) { --n: 1; } .deck:nth-child(3) { --n: 2; } .deck:nth-child(4) { --n: 3; } .deck:nth-child(5) { --n: 4; }
+.reveal-ready .deck-list[data-reveal].is-in .deck { animation: rise-in 640ms var(--settle) both; animation-delay: calc(var(--n) * 90ms + 60ms); }
+.shot:nth-child(1) { --n: 0; } .shot:nth-child(2) { --n: 1; }
+.reveal-ready .spotlight__shots[data-reveal].is-in .shot { animation: deal-tile 700ms var(--throw) both; animation-delay: calc(var(--n) * 120ms + 120ms); }
 
 /* Seats take their places, then the turn goes once around the table
    (You, then left, top and right, as the game seats them) and comes home. */

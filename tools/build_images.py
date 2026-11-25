@@ -6,7 +6,8 @@
 
 Every source is read from the Tres game repository at a named commit with
 `git show` (the game repository is only read). CREDITS.md names what each
-source is and whose it is.
+source is and whose it is. The theme showcase's pictures come from captures
+of the released game instead: tools/build_themes.py.
 
     uv run tools/build_images.py --game-repo ../tres --ref origin/main
 
@@ -26,29 +27,12 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = ROOT / "assets" / "img"
 
 ICON = "assets/brand/tres-play-icon-512.png"
-THEMES = "assets/screenshots/03-four-table-themes.jpg"
-# The four table tiles inside the store screenshot (1440 x 2560), measured on
-# its pixels: each tile's frame, inset 3 px so no frame line survives.
-THEME_TILES = {
-    "first-light": (96, 358, 707, 1396),
-    "perlas": (733, 358, 1344, 1396),
-    "violet-hour": (96, 1422, 707, 2460),
-    "manila-bay": (733, 1422, 1344, 2460),
-}
 # The media kit: the store screenshots that show no room code or QR code
 # (02, 04 and 08 do, so they are left out), the feature graphic, the icon.
 MEDIA_SHOTS = ["01-solo-gameplay", "03-four-table-themes", "05-cosmetic-theme-shop",
                "06-milestones-and-tokens", "07-full-game-result"]
 FEATURE = "assets/graphic/tres-feature-graphic-1024x500.png"
 ICON_SOURCE = "assets/brand/tres-store-icon-source.png"
-# Court figures, one per theme deck: (output name, source path).
-COURTS = [
-    ("first-light-king-red", "assets/cards/first-light/court-king-red.png"),
-    ("violet-hour-king-black", "assets/cards/violet-hour/court-king-black.png"),
-    ("manila-bay-queen-red", "assets/cards/manila-bay/court-queen-red.png"),
-    ("evergrove-king-red", "assets/cards/evergrove/court-king-red.png"),
-    ("neon-coast-queen-red", "assets/cards/neon-coast/court-queen-red.png"),
-]
 
 
 def raw(repo, ref, path) -> bytes:
@@ -85,7 +69,7 @@ def main() -> None:
     ap.add_argument("--ref", default="origin/main")
     a = ap.parse_args()
     media = ROOT / "assets" / "media"
-    for d in (IMG, IMG / "themes", IMG / "courts", media):
+    for d in (IMG, media):
         d.mkdir(parents=True, exist_ok=True)
     if not shutil.which("cwebp"):
         raise SystemExit("cwebp is required (brew install webp)")
@@ -99,22 +83,6 @@ def main() -> None:
     png(icon.resize((192, 192), lanczos), IMG / "icon-192.png")
     icon.save(ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
     print(f"favicon.ico: {(ROOT / 'favicon.ico').stat().st_size:,} B")
-
-    # Four table themes, cut from the store screenshot of them.
-    themes = blob(a.game_repo, a.ref, THEMES).convert("RGB")
-    for name, box in THEME_TILES.items():
-        tile = themes.crop(box)
-        w = 480
-        h = round(tile.height * w / tile.width)
-        webp(tile.resize((w, h), lanczos), IMG / "themes" / f"{name}.webp", 80)
-
-    # Court figures: 2x the largest size the page draws them (about 150 px tall).
-    for name, path in COURTS:
-        plate = blob(a.game_repo, a.ref, path).convert("RGBA")
-        h = 300
-        w = round(plate.width * h / plate.height)
-        webp(plate.resize((w, h), lanczos), IMG / "courts" / f"{name}.webp", 84, alpha=True)
-
 
     # Media kit. The store files are served byte for byte as downloads, with a
     # small preview of each for the page itself.
